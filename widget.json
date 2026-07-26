@@ -1,0 +1,6 @@
+{
+    "name": "Stocks",
+    "description": "A stock and crypto ticker from Yahoo Finance, auto-refreshing with theme-aware gains and losses; click a symbol to open it.",
+    "author": "Dion Munk",
+    "email": "dion@dionmunk.com"
+}
