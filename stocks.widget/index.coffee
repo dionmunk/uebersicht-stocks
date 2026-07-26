@@ -19,7 +19,7 @@ style: """
   left 1000px
 
   color var(--text, #fff)
-  text-shadow: 0 1px 1px rgba(20, 1, 1, 0.10)
+  text-shadow: 0 1px 1px rgba(20, 1, 1, 0.2)   // standard shadow shared across the widgets
   font-family -apple-system, BlinkMacSystemFont, system-ui, sans-serif   // macOS system font (San Francisco)
 
   .panel
@@ -43,8 +43,8 @@ style: """
     border-collapse collapse
 
   .stocks td
-    font-size 12px
-    font-weight 300
+    font-size 13px            // match the news widget headline
+    font-weight 500
     padding 3px 0
     white-space nowrap
 
