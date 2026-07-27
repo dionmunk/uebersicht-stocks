@@ -9,8 +9,11 @@
 
 command: "stocks.widget/lib/stocks.sh"
 
+# Enable or disable this widget.
+widgetEnabled: true   # true | false
+
 # How often to refresh the quotes. Übersicht expects milliseconds, so this is written
-# as <minutes> * 60 * 1000 — edit the leading number to set the interval in minutes.
+# as <minutes> * 60 * 1000, so edit the leading number to set the interval in minutes.
 refreshFrequency: 15 * 60 * 1000   # 15 minutes
 
 style: """
@@ -103,6 +106,11 @@ openUrl: (url) ->
   fetch '/run/', method: 'POST', body: "open '#{safe}'"
 
 update: (output, domEl) ->
+  # Hide entirely when disabled.
+  if not @widgetEnabled
+    $(domEl).css('display', 'none')
+    return
+  $(domEl).css('display', '')
   self = this
   rows = []
   for line in (output or '').split('\n')
