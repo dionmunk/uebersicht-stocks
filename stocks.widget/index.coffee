@@ -17,9 +17,9 @@ widgetEnabled: true   # true | false
 refreshFrequency: 15 * 60 * 1000   # 15 minutes
 
 style: """
-  // grid: col 4 · row 3+ — directly right of the news widget (see LAYOUT.md)
-  top 190px
-  left 1000px
+  // grid: col 2 · rows 8+ — below the news widget (see LAYOUT.md)
+  top 640px
+  left 340px
 
   color var(--text, #fff)
   text-shadow: 0 1px 1px rgba(20, 1, 1, 0.2)   // standard shadow shared across the widgets
@@ -31,8 +31,8 @@ style: """
     backdrop-filter: blur(var(--panel-blur, 48px))
     border-radius 10px
     box-sizing border-box
-    min-height 80px            // one grid UNIT; grows with the symbol list
-    width 320px
+    min-height var(--grid-unit, 80px)            // one grid UNIT; grows with the symbol list
+    width var(--grid-col, 320px)
     padding 9px 10px 10px
 
   .widget-title
